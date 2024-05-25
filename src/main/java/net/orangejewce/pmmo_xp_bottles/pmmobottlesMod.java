@@ -14,8 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.orangejewce.pmmo_xp_bottles.datagen.ItemModelGen;
+import net.orangejewce.pmmo_xp_bottles.init.ModCreativeModTabs;
 import net.orangejewce.pmmo_xp_bottles.init.PmmoXpBottlesModItems;
-import net.orangejewce.pmmo_xp_bottles.items.ModCreativeModTabs;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
