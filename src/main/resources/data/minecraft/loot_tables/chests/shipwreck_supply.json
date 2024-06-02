@@ -310,7 +310,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:swimming",
+          "name": "pmmo_xp_bottles:swimming_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -328,7 +328,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:building",
+          "name": "pmmo_xp_bottles:building_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -346,7 +346,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:swimming",
+          "name": "pmmo_xp_bottles:swimming_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -364,7 +364,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:alchemy",
+          "name": "pmmo_xp_bottles:alchemy_rare_bottle",
           "weight": 1,
           "functions": [
             {

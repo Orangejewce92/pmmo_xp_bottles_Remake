@@ -297,7 +297,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:endurance",
+          "name": "pmmo_xp_bottles:endurance_epic_bottle",
           "weight": 1,
           "functions": [
             {
@@ -315,7 +315,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:farming",
+          "name": "pmmo_xp_bottles:farming_epic_bottle",
           "weight": 1,
           "functions": [
             {
@@ -327,13 +327,13 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{amount: 6500,empty:1b}"
+              "tag": "{amount: 6500}"
             }
           ]
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:magic",
+          "name": "pmmo_xp_bottles:magic_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -351,7 +351,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:archery",
+          "name": "pmmo_xp_bottles:archery_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -369,7 +369,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:combat",
+          "name": "pmmo_xp_bottles:combat_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -387,7 +387,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:endurance",
+          "name": "pmmo_xp_bottles:endurance_rare_bottle",
           "weight": 1,
           "functions": [
             {

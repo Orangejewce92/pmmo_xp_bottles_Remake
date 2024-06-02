@@ -281,7 +281,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:endurance",
+          "name": "pmmo_xp_bottles:endurance_rare_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -299,7 +299,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:combat",
+          "name": "pmmo_xp_bottles:combat_rare_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -317,7 +317,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:archery",
+          "name": "pmmo_xp_bottles:archery_rare_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -335,7 +335,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:magic",
+          "name": "pmmo_xp_bottles:magic_rare_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -353,7 +353,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:magic",
+          "name": "pmmo_xp_bottles:magic_epic_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -371,7 +371,7 @@
         {
           "type": "minecraft:item",
           "weight": 1,
-          "name": "pmmo_xp_bottles:excavation",
+          "name": "pmmo_xp_bottles:excavation_rare_bottle",
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -379,10 +379,6 @@
                 "min": 1,
                 "max": 1
               }
-            },
-            {
-              "function": "minecraft:set_nbt",
-              "tag": "{amount: 1500}"
             }
           ]
         },

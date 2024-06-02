@@ -14,35 +14,28 @@ public class PmmoXpBottlesModItems {
     public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, pmmobottlesMod.MOD_ID);
 
     public static final Map<String, RegistryObject<Item>> ALL_BOTTLES = new HashMap<>();
-    public static final RegistryObject<Item> ARCHERY_BOTTLE = make("archery");
+
+    private static final String[] SKILLS = {
+            "archery", "woodcutting", "mining", "building", "excavation", "farming",
+            "agility", "endurance", "combat", "gunslinging", "smithing", "crafting",
+            "magic", "slayer", "hunter", "taming", "cooking", "alchemy",
+            "engineering", "fishing", "sailing", "swimming"
+    };
+
+    private static final String[] TIERS = {"common", "rare", "epic"};
 
     static {
-        make("woodcutting");
-        make("mining");
-        make("building");
-        make("excavation");
-        make("farming");
-        make("agility");
-        make("endurance");
-        make("combat");
-        make("gunslinging");
-        make("smithing");
-        make("crafting");
-        make("magic");
-        make("slayer");
-        make("hunter");
-        make("taming");
-        make("cooking");
-        make("alchemy");
-        make("engineering");
-        make("fishing");
-        make("sailing");
-        make("swimming");
+        for (String skill : SKILLS) {
+            for (String tier : TIERS) {
+                make(skill, tier);
+            }
+        }
     }
 
-    private static RegistryObject<Item> make(String skill) {
-        RegistryObject<Item> obj = REGISTRY.register(skill, () -> new XpBottleItem(skill));
-        ALL_BOTTLES.put(skill, obj);
+    private static RegistryObject<Item> make(String skill, String tier) {
+        String registryName = skill + "_" + tier + "_bottle";
+        RegistryObject<Item> obj = REGISTRY.register(registryName, () -> new XpBottleItem(skill, tier));
+        ALL_BOTTLES.put(registryName, obj);
         return obj;
     }
 }

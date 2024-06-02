@@ -175,7 +175,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:smithing",
+          "name": "pmmo_xp_bottles:smithing_common_bottle",
           "weight": 1,
           "functions": [
             {
@@ -187,7 +187,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{amount: 1500}"
+              "tag": "{amount: 500}"
             }
           ]
         }
@@ -198,7 +198,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:smithing",
+          "name": "pmmo_xp_bottles:smithing_epic_bottle",
           "weight": 1,
           "functions": [
             {
@@ -210,7 +210,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{amount: 100000,empty:1b}"
+              "tag": "{amount: 100000}"
             }
           ]
         }
@@ -221,7 +221,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:crafting",
+          "name": "pmmo_xp_bottles:crafting_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -244,7 +244,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:archery",
+          "name": "pmmo_xp_bottles:archery_rare_bottle",
           "weight": 1,
           "functions": [
             {

@@ -24,19 +24,27 @@ public class ItemModelGen extends ItemModelProvider {
 
     private void generateBottleModel(Item item) {
         ResourceLocation id = ForgeRegistries.ITEMS.getKey(item);
+        String itemPath = id.getPath();
 
-        // Generate the model for the empty bottle
-        var emptyModel = this.getBuilder(id.getPath() + "_e")
-                .parent(this.getExistingFile(this.mcLoc("item/generated")))
-                .texture("layer0", new ResourceLocation(pmmobottlesMod.MOD_ID, "item/" + id.getPath() + "_e"));
+        // Extract the skill and tier from the item path
+        String[] parts = itemPath.split("_");
+        if (parts.length >= 3) {
+            String skill = parts[0];
+            String tier = parts[1];
 
-        // Generate the model for the filled bottle with override
-        this.getBuilder(id.getPath())
-                .parent(this.getExistingFile(this.mcLoc("item/generated")))
-                .texture("layer0", new ResourceLocation(pmmobottlesMod.MOD_ID, "item/" + id.getPath()))
-                .override()
-                .predicate(new ResourceLocation(pmmobottlesMod.MOD_ID, "empty"), 1f)
-                .model(emptyModel)
-                .end();
+            // Generate the model for the empty bottle
+            var emptyModel = this.getBuilder(skill + "_" + tier + "_bottle_e")
+                    .parent(this.getExistingFile(this.mcLoc("item/generated")))
+                    .texture("layer0", new ResourceLocation(pmmobottlesMod.MOD_ID, "item/" + skill + "_" + tier + "_bottle_e"));
+
+            // Generate the model for the filled bottle with override
+            this.getBuilder(skill + "_" + tier + "_bottle")
+                    .parent(this.getExistingFile(this.mcLoc("item/generated")))
+                    .texture("layer0", new ResourceLocation(pmmobottlesMod.MOD_ID, "item/" + skill + "_" + tier + "_bottle"))
+                    .override()
+                    .predicate(new ResourceLocation(pmmobottlesMod.MOD_ID, "empty"), 1f)
+                    .model(emptyModel)
+                    .end();
+        }
     }
 }

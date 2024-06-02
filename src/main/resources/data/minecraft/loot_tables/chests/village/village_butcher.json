@@ -101,7 +101,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:farming",
+          "name": "pmmo_xp_bottles:farming_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -124,7 +124,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:cooking",
+          "name": "pmmo_xp_bottles:cooking_epic_bottle",
           "weight": 1,
           "functions": [
             {
@@ -136,7 +136,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{amount: 1500}"
+              "tag": "{amount: 6500}"
             }
           ]
         }

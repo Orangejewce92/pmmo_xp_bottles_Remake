@@ -274,7 +274,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:building",
+          "name": "pmmo_xp_bottles:building_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -292,7 +292,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:combat",
+          "name": "pmmo_xp_bottles:combat_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -310,7 +310,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:combat",
+          "name": "pmmo_xp_bottles:combat_epic_bottle",
           "weight": 1,
           "functions": [
             {
@@ -322,7 +322,7 @@
             },
             {
               "function": "minecraft:set_nbt",
-              "tag": "{amount: 5000}"
+              "tag": "{amount: 7000}"
             }
           ]
         },
@@ -346,7 +346,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:endurance",
+          "name": "pmmo_xp_bottles:endurance_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -364,7 +364,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:endurance",
+          "name": "pmmo_xp_bottles:endurance_rare_bottle",
           "weight": 1,
           "functions": [
             {

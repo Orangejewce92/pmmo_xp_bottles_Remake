@@ -117,7 +117,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:fishing",
+          "name": "pmmo_xp_bottles:fishing_rare_bottle",
           "weight": 1,
           "functions": [
             {
@@ -135,7 +135,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "pmmo_xp_bottles:sailing",
+          "name": "pmmo_xp_bottles:sailing_rare_bottle",
           "weight": 1,
           "functions": [
             {
