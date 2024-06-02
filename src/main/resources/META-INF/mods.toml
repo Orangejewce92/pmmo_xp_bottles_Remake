@@ -62,6 +62,14 @@ description='''${mod_description}'''
     versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+# Adding Project MMO as a dependency
+[[dependencies.${mod_id}]]
+modId="pmmo"
+mandatory=true
+# The version range of Project MMO, specifying the minimum version
+versionRange="[1.2.11,)"
+ordering="NONE"
+side="BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares
 # that your mod requires GL version 3.2 or higher. Other features will be added. They are side aware so declaring this won't
