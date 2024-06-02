@@ -3,6 +3,6 @@
   "pmmo_xp_bottles.xp_bottle": "XP Bottle",
   "pmmo_xp_bottles.not_enough": "You do not have enough %s XP to fill this bottle.",
   "pmmo_xp_bottles.volume": "%s XP Capacity",
-  "itemGroup.tabpmmoxpbottles": "PMMO XP Bottles",
+  "itemGroup.pmmo_xp_bottles": "PMMO XP Bottles",
   "creativetab.bottles_tab": "PMMO XP Bottles"
 }

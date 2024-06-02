@@ -1,7 +1,6 @@
 package net.orangejewce.pmmo_xp_bottles.items;
 
 import harmonised.pmmo.api.APIUtils;
-import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,12 +36,6 @@ public class XpBottleItem extends Item {
         instance.getOrCreateTag().putBoolean(EMPTY, false);
         instance.getTag().putLong(AMOUNT, 1500);
         return instance;
-    }
-    public void fillItemCategory(CreativeModeTab tab, NonNullList<ItemStack> list) {
-        if (tab == ModCreativeModTabs.CREATIVE_MODE_TABS.getEntries()) {
-            list.removeIf(stack -> stack.getOrCreateTag().getLong(AMOUNT) == 0L);
-            list.add(this.getDefaultInstance());
-        }
     }
 
     @Override

@@ -3,10 +3,8 @@ package net.orangejewce.pmmo_xp_bottles.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-
 import net.minecraft.world.item.Item;
 import net.orangejewce.pmmo_xp_bottles.items.XpBottleItem;
-
 import net.orangejewce.pmmo_xp_bottles.pmmobottlesMod;
 
 import java.util.HashMap;

@@ -14,9 +14,10 @@ import net.minecraftforge.registries.RegistryObject;
 import net.orangejewce.pmmo_xp_bottles.init.PmmoXpBottlesModItems;
 import net.orangejewce.pmmo_xp_bottles.pmmobottlesMod;
 
-@Mod.EventBusSubscriber(modid= pmmobottlesMod.MOD_ID, bus=Mod.EventBusSubscriber.Bus.MOD, value= Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = pmmobottlesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientSetup {
-    private static final ResourceLocation EMPTY = new ResourceLocation("empty");
+    private static final ResourceLocation EMPTY = new ResourceLocation(pmmobottlesMod.MOD_ID, "empty");
+
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
