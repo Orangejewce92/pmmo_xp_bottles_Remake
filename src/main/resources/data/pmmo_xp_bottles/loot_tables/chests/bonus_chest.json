@@ -1,0 +1,735 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:agility_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:agility_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:agility_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:alchemy_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:alchemy_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:alchemy_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:archery_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:archery_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:archery_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:building_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:building_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:building_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:combat_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:combat_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:combat_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:cooking_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:cooking_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:cooking_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:crafting_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:crafting_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:crafting_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:endurance_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:endurance_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:endurance_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:engineering_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:engineering_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:engineering_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:excavation_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:excavation_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:excavation_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:farming_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:farming_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:farming_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:fishing_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:fishing_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:fishing_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:gunslinging_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:gunslinging_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:gunslinging_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:hunter_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:hunter_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:hunter_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:magic_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:magic_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:magic_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:mining_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:mining_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:mining_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:sailing_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:sailing_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:sailing_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:slayer_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:slayer_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:slayer_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:smithing_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:smithing_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:smithing_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:swimming_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:swimming_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:swimming_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:taming_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:taming_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:taming_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:woodcutting_common_bottle",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:woodcutting_rare_bottle",
+          "weight": 2,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 3500}"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "pmmo_xp_bottles:woodcutting_epic_bottle",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_nbt",
+              "tag": "{amount: 9000}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

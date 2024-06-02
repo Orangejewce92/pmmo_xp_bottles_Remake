@@ -29,6 +29,8 @@ public class pmmobottlesMod {
         // Register items and creative tabs
         PmmoXpBottlesModItems.REGISTRY.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
+        MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(ModEventSubscriber.class);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(ClientSetup::init);

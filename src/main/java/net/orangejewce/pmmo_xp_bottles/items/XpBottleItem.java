@@ -18,14 +18,13 @@ import java.util.List;
 public class XpBottleItem extends Item {
     private static final String EMPTY = "empty";
     private static final String AMOUNT = "amount";
-    private static final String EFFECT_APPLIED = "effect_applied";
     private final String skill;
     private final String tier;
 
     public XpBottleItem(String skill, String tier) {
         super(new Properties()
                 .stacksTo(64)
-                .rarity(getRarity(tier))
+                .rarity(getRarityFromTier(tier))
                 .food(new FoodProperties.Builder()
                         .nutrition(0)
                         .saturationMod(0f)
@@ -35,14 +34,14 @@ public class XpBottleItem extends Item {
         this.tier = tier;
     }
 
-    private static Rarity getRarity(String tier) {
+    private static Rarity getRarityFromTier(String tier) {
         switch (tier) {
             case "common":
                 return Rarity.COMMON;
             case "rare":
-                return Rarity.RARE;
+                return Rarity.UNCOMMON; // Typically green in Minecraft
             case "epic":
-                return Rarity.EPIC;
+                return Rarity.RARE; // Blue
             default:
                 return Rarity.COMMON;
         }
@@ -57,62 +56,52 @@ public class XpBottleItem extends Item {
 
     public void initializeNBT(ItemStack stack) {
         stack.getOrCreateTag().putBoolean(EMPTY, false);
-        stack.getOrCreateTag().putLong(AMOUNT, getXpAmount(tier));
-        stack.getOrCreateTag().putBoolean(EFFECT_APPLIED, false);
-    }
-
-    private long getXpAmount(String tier) {
+        long amount;
         switch (tier) {
             case "common":
-                return 500;
+                amount = 500;
+                break;
             case "rare":
-                return 1500;
+                amount = 3500;
+                break;
             case "epic":
-                return 10000;
+                amount = 9000;
+                break;
             default:
-                return 500;
+                amount = 1500; // Default value, should not happen
+                break;
         }
+        stack.getOrCreateTag().putLong(AMOUNT, amount);
     }
 
-    private void applySkillEffects(Player player, String skill) {
+    private void applySkillEffects(Player player) {
         switch (skill) {
             case "mining":
-                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 600, getEffectAmplifier(tier))); // Haste effect
+                player.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 600, 1)); // Haste effect for 30 seconds
                 break;
             case "combat":
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, getEffectAmplifier(tier))); // Strength effect
+                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 600, 1)); // Strength effect for 30 seconds
                 break;
             case "farming":
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 600, 1)); // Luck effect for 30 seconds
+                break;
             case "fishing":
-                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 600, getEffectAmplifier(tier))); // Luck effect
+                player.addEffect(new MobEffectInstance(MobEffects.LUCK, 600, 1)); // Luck effect for 30 seconds
                 break;
             case "endurance":
-                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600, getEffectAmplifier(tier))); // Regen effect
+                player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 600, 1)); // Regeneration effect for 30 seconds
                 break;
             case "agility":
-                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, getEffectAmplifier(tier))); // Speed effect
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 600, 1)); // Speed effect for 30 seconds
                 break;
             case "magic":
-                player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, getEffectAmplifier(tier))); // Night vision effect
+                player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 1)); // Night Vision effect for 30 seconds
                 break;
             case "swimming":
-                player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 600, getEffectAmplifier(tier))); // Water breathing effect
+                player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 600, 1)); // Water Breathing effect for 30 seconds
                 break;
             default:
                 break;
-        }
-    }
-
-    private int getEffectAmplifier(String tier) {
-        switch (tier) {
-            case "common":
-                return 0;
-            case "rare":
-                return 1;
-            case "epic":
-                return 2;
-            default:
-                return 0;
         }
     }
 
@@ -126,9 +115,9 @@ public class XpBottleItem extends Item {
     public Component getName(ItemStack stack) {
         boolean isEmpty = stack.getOrCreateTag().getBoolean(EMPTY);
         MutableComponent start = isEmpty ? Component.translatable("pmmo_xp_bottles.empty") : Component.empty();
-        MutableComponent skillComponent = Component.translatable("pmmo." + this.skill);
         MutableComponent tierComponent = Component.translatable("pmmo_xp_bottles.tier." + this.tier);
-        return start.append(skillComponent).append(" ").append(tierComponent).append(" ").append(Component.translatable("pmmo_xp_bottles.xp_bottle"));
+        MutableComponent skillComponent = Component.translatable("pmmo." + this.skill);
+        return start.append(tierComponent).append(" ").append(skillComponent).append(" ").append(Component.translatable("pmmo_xp_bottles.xp_bottle"));
     }
 
     @Override
@@ -146,6 +135,7 @@ public class XpBottleItem extends Item {
             case "combat":
                 return Component.translatable("pmmo_xp_bottles.effect.strength");
             case "farming":
+                return Component.translatable("pmmo_xp_bottles.effect.luck");
             case "fishing":
                 return Component.translatable("pmmo_xp_bottles.effect.luck");
             case "agility":
@@ -174,8 +164,7 @@ public class XpBottleItem extends Item {
 
         boolean isEmpty = itemstack.getOrCreateTag().getBoolean(EMPTY);
         long amount = itemstack.getTag().getLong(AMOUNT);
-        boolean effectApplied = itemstack.getOrCreateTag().getBoolean(EFFECT_APPLIED);
-        ItemStack retval = new ItemStack(PmmoXpBottlesModItems.ALL_BOTTLES.get(skill).get());
+        ItemStack retval = new ItemStack(PmmoXpBottlesModItems.ALL_BOTTLES.get(skill + "_" + tier + "_bottle").get());
 
         if (isEmpty) {
             if (APIUtils.getXp(skill, player) < amount) {
@@ -187,11 +176,8 @@ public class XpBottleItem extends Item {
                 retval.getTag().putLong(AMOUNT, amount);
             }
         } else {
-            if (!effectApplied) {
-                APIUtils.addXp(skill, player, amount);
-                applySkillEffects(player, skill); // Apply skill-based effects
-                itemstack.getOrCreateTag().putBoolean(EFFECT_APPLIED, true);
-            }
+            APIUtils.addXp(skill, player, amount);
+            applySkillEffects(player); // Apply skill-based effects
             retval.getOrCreateTag().putBoolean(EMPTY, true);
             retval.getTag().putLong(AMOUNT, amount);
         }
