@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.orangejewce.pmmo_xp_bottles.pmmobottlesMod;
+import net.orangejewce.pmmo_xp_bottles.items.XpBottleItem;
 
 @Mod.EventBusSubscriber(modid = pmmobottlesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModCreativeModTabs {
@@ -32,7 +33,11 @@ public class ModCreativeModTabs {
     @SubscribeEvent
     public static void addItemsToTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == NEW_TAB.get()) {
-            PmmoXpBottlesModItems.ALL_BOTTLES.values().forEach(item -> event.accept(item.get()));
+            PmmoXpBottlesModItems.ALL_BOTTLES.values().forEach(item -> {
+                ItemStack stack = new ItemStack(item.get());
+                ((XpBottleItem)item.get()).initializeNBT(stack);  // Ensure default values are set
+                event.accept(stack);
+            });
         }
     }
 }

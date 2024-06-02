@@ -22,12 +22,10 @@ public class ClientSetup {
     public static void init(final FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             for (RegistryObject<Item> item : PmmoXpBottlesModItems.ALL_BOTTLES.values()) {
-                ItemProperties.register(item.get(), EMPTY, ClientSetup::isEmpty);
+                ItemProperties.register(item.get(), EMPTY, (ItemStack stack, ClientLevel level, LivingEntity entity, int seed) ->
+                        stack.getOrCreateTag().getBoolean("empty") ? 1f : 0f
+                );
             }
         });
-    }
-
-    private static float isEmpty(ItemStack stack, ClientLevel level, LivingEntity entity, int e) {
-        return stack.getOrCreateTag().getBoolean("empty") ? 1f : 0f;
     }
 }

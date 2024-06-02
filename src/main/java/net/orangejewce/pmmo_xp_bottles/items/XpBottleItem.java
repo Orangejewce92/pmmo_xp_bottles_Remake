@@ -33,9 +33,19 @@ public class XpBottleItem extends Item {
     @Override
     public ItemStack getDefaultInstance() {
         ItemStack instance = new ItemStack(this);
-        instance.getOrCreateTag().putBoolean(EMPTY, false);
-        instance.getTag().putLong(AMOUNT, 1500);
+        initializeNBT(instance);
         return instance;
+    }
+
+    public void initializeNBT(ItemStack stack) {
+        stack.getOrCreateTag().putBoolean(EMPTY, false);
+        stack.getOrCreateTag().putLong(AMOUNT, 1500);
+    }
+
+    @Override
+    public void onCraftedBy(ItemStack stack, Level level, Player player) {
+        initializeNBT(stack);
+        super.onCraftedBy(stack, level, player);
     }
 
     @Override
