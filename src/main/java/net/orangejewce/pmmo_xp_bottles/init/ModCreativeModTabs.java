@@ -3,6 +3,7 @@ package net.orangejewce.pmmo_xp_bottles.init;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
@@ -34,11 +35,9 @@ public class ModCreativeModTabs {
     @SubscribeEvent
     public static void addItemsToTabs(BuildCreativeModeTabContentsEvent event) {
         if (event.getTab() == NEW_TAB.get()) {
-            PmmoXpBottlesModItems.ALL_BOTTLES.values().forEach(item -> {
-                ItemStack stack = new ItemStack(item.get());
-                ((XpBottleItem)item.get()).initializeNBT(stack);  // Ensure default values are set
-                event.accept(stack);
-            });
+            PmmoXpBottlesModItems.ALL_BOTTLES.keySet().stream().sorted().toList().stream()
+                    .map(key -> PmmoXpBottlesModItems.ALL_BOTTLES.get(key).get().getDefaultInstance())
+                    .forEach(event::accept);
         }
     }
 }
