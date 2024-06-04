@@ -10,6 +10,8 @@ import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.List;
+
 @Mod.EventBusSubscriber(modid = pmmobottlesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEventSubscriber {
 
@@ -28,23 +30,34 @@ public class ModEventSubscriber {
         }
 
         // Inject bottles into chest loot tables
-        if (name.equals(BuiltInLootTables.SPAWN_BONUS_CHEST) ||
-                name.equals(new ResourceLocation("minecraft", "chests/simple_dungeon")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/stronghold_corridor")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/stronghold_crossing")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/stronghold_library")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/spawn_bonus_chest")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/ruined_portal")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_butcher")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_desert_house")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_mason")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_plains_house")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_savanna_house")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_snowy_house")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_taiga_house")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_temple")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_toolsmith")) ||
-                name.equals(new ResourceLocation("minecraft", "chests/village/village_weaponsmith"))) {
+        if (List.of(BuiltInLootTables.SPAWN_BONUS_CHEST,
+                BuiltInLootTables.SIMPLE_DUNGEON,
+                BuiltInLootTables.STRONGHOLD_CORRIDOR,
+                BuiltInLootTables.STRONGHOLD_CROSSING,
+                BuiltInLootTables.STRONGHOLD_LIBRARY,
+                BuiltInLootTables.RUINED_PORTAL,
+                BuiltInLootTables.VILLAGE_BUTCHER,
+                BuiltInLootTables.VILLAGE_DESERT_HOUSE,
+                BuiltInLootTables.VILLAGE_MASON,
+                BuiltInLootTables.VILLAGE_PLAINS_HOUSE,
+                BuiltInLootTables.VILLAGE_SAVANNA_HOUSE,
+                BuiltInLootTables.VILLAGE_SNOWY_HOUSE,
+                BuiltInLootTables.VILLAGE_TAIGA_HOUSE,
+                BuiltInLootTables.VILLAGE_TEMPLE,
+                BuiltInLootTables.ABANDONED_MINESHAFT,
+                BuiltInLootTables.SHIPWRECK_MAP,
+                BuiltInLootTables.DESERT_PYRAMID_ARCHAEOLOGY,
+                BuiltInLootTables.DESERT_WELL_ARCHAEOLOGY,
+                BuiltInLootTables.OCEAN_RUIN_COLD_ARCHAEOLOGY,
+                BuiltInLootTables.OCEAN_RUIN_WARM_ARCHAEOLOGY,
+                BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_COMMON,
+                BuiltInLootTables.TRAIL_RUINS_ARCHAEOLOGY_RARE,
+                BuiltInLootTables.JUNGLE_TEMPLE,
+                BuiltInLootTables.NETHER_BRIDGE,
+                BuiltInLootTables.UNDERWATER_RUIN_SMALL,
+                BuiltInLootTables.UNDERWATER_RUIN_BIG,
+                BuiltInLootTables.VILLAGE_TOOLSMITH,
+                BuiltInLootTables.VILLAGE_WEAPONSMITH).contains(name))  {
             injectLoot(event.getTable(), "chests/bonus_chest");
         }
     }
