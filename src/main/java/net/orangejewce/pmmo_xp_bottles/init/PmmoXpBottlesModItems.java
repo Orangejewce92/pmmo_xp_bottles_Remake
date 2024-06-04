@@ -22,6 +22,7 @@ public class PmmoXpBottlesModItems {
             for (Rarity tier : Arrays.stream(Rarity.values()).filter(rarity -> rarity != Rarity.UNCOMMON).toList()) {
                 make(skill, tier);
             }
+            //Rarity.values()) *if i want to create uncommon bottles* (need textures )
         }
     }
 

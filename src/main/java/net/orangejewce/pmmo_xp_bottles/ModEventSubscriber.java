@@ -1,6 +1,7 @@
 package net.orangejewce.pmmo_xp_bottles;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootTableReference;
@@ -27,7 +28,7 @@ public class ModEventSubscriber {
         }
 
         // Inject bottles into chest loot tables
-        if (name.equals(new ResourceLocation("minecraft", "chests/bonus_chest")) ||
+        if (name.equals(BuiltInLootTables.SPAWN_BONUS_CHEST) ||
                 name.equals(new ResourceLocation("minecraft", "chests/simple_dungeon")) ||
                 name.equals(new ResourceLocation("minecraft", "chests/stronghold_corridor")) ||
                 name.equals(new ResourceLocation("minecraft", "chests/stronghold_crossing")) ||

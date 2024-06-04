@@ -1,9 +1,11 @@
 package net.orangejewce.pmmo_xp_bottles;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,6 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.orangejewce.pmmo_xp_bottles.client.ClientSetup;
 import net.orangejewce.pmmo_xp_bottles.datagen.ItemModelGen;
+import net.orangejewce.pmmo_xp_bottles.datagen.ModRecipeProvider;
+import net.orangejewce.pmmo_xp_bottles.datagen.ModTagProvider;
 import net.orangejewce.pmmo_xp_bottles.init.ModCreativeModTabs;
 import net.orangejewce.pmmo_xp_bottles.init.PmmoXpBottlesModItems;
 import org.slf4j.Logger;
@@ -52,5 +56,14 @@ public class pmmobottlesMod {
     public void genData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         generator.addProvider(true, new ItemModelGen(generator, event.getExistingFileHelper()));
+        generator.addProvider(true, new ModRecipeProvider(generator.getPackOutput()));
+        var blockTagProvider = new BlockTagsProvider(event.getGenerator().getPackOutput(), event.getLookupProvider(), pmmobottlesMod.MOD_ID, event.getExistingFileHelper()) {
+            @Override
+            protected void addTags(HolderLookup.Provider pProvider) {
+            }
+        };
+        generator.addProvider(true, blockTagProvider);
+        generator.addProvider(true, new ModTagProvider(generator.getPackOutput(), event.getLookupProvider(), blockTagProvider.contentsGetter(), event.getExistingFileHelper()));
+
     }
 }

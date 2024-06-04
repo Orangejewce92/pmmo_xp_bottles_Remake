@@ -87,9 +87,9 @@ public class XpBottleItem extends Item {
         stack.getOrCreateTag().putBoolean(EMPTY, false);
         long amount = switch (tier) {
             case COMMON -> 500;
+            case UNCOMMON -> 1500;
             case RARE -> 3500;
             case EPIC -> 9000;
-            default -> 1500; // Default value, should not happen
         };
         stack.getOrCreateTag().putLong(AMOUNT, amount);
     }
