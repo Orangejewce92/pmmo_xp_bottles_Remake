@@ -28,6 +28,7 @@ Welcome to PMMO XP Bottles, an immersive mod that enhances your Minecraft experi
 ### Loot Integration
 - **Mob Drops**: Certain mobs drop combat and endurance bottles.
 - **Chest Loot**: XP bottles can be found in various chests, including village and dungeon chests.
+- **Archeology**: Sift some suspisous sand to find some xp bottles too!
 
 ## Installation
 
