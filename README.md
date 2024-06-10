@@ -40,7 +40,7 @@ Welcome to PMMO XP Bottles, an immersive mod that enhances your Minecraft experi
 
 ## How to Use
 
-- **Craft or Find XP Bottles**: XP bottles can be crafted or found as loot in chests and from mob drops.
+- **Find XP Bottles**: XP bottles can be crafted into glass bottles or found as loot in chests and from mob drops as full xp bottles with chances at any rarity of drop.
 - **Drink the XP Bottles**: Right-click to drink the XP bottle and receive the corresponding XP and skill-specific effects.
 - **Enhance Your Skills**: Use the gained XP to level up your PMMO skills and enjoy the benefits of the applied effects.
 
